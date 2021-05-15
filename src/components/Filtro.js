@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { AppBar, Toolbar, Typography,makeStyles, Container, Slider, FormGroup, FormControlLabel,Checkbox, FormControl, FormLabel  } from "@material-ui/core";
+import { AppBar, Toolbar, Typography,makeStyles, Container, Slider, FormGroup, FormControlLabel,Checkbox, FormControl, FormLabel,Button  } from "@material-ui/core";
 
 const useStyles = makeStyles({
     root: {
-      width: 300,
+      width: 400,
     },
   });
 
@@ -17,6 +17,7 @@ export default function Filtro() {
         checkedVentas: true,
         checkedCasa: true,
         checkedDpto: true,
+        
     });
   
     const handleChange = (event, newValue) => {
@@ -32,7 +33,7 @@ export default function Filtro() {
             <Container maxWidth="sm">
                 <div className={classes.root}>
                     <FormControl>
-                        <FormLabel component="legend">Alquiler o venta</FormLabel>
+                        <FormLabel component="legend">Tipo de Contrato</FormLabel>
                         <FormGroup row>
                             <FormControlLabel
                                 control={
@@ -58,7 +59,7 @@ export default function Filtro() {
                         </FormGroup>
                     </FormControl>
                     <FormControl>
-                        <FormLabel component="legend">Casita o dpto</FormLabel>
+                        <FormLabel component="legend">Tipo Inmueble</FormLabel>
                         <FormGroup row>
                             <FormControlLabel
                                 control={
@@ -83,20 +84,59 @@ export default function Filtro() {
                             />
                         </FormGroup>
                     </FormControl>
-
-
-                    <Typography id="range-slider" gutterBottom>
-                        Precio
-                    </Typography>
-                    <Slider
-                        value={value}
-                        max={100000}
-                        step={1000}
-                        onChange={handleChange}
-                        valueLabelDisplay="auto"
-                        aria-labelledby="range-slider"
-                        valueLabelFormat={(value)=>{return `${value/1000}K`}}
-                    />
+                    <FormControl>
+                    <FormLabel component="legend">Habitaciones</FormLabel>
+                        <FormGroup row>
+                            <FormControlLabel
+                                control={
+                                <Checkbox 
+                                    checked={tipos.checkedMono} 
+                                    onChange={handleTipos} 
+                                    name="checkedMono" 
+                                    color="primary"
+                                />}
+                                label="Monoambiente"
+                            />
+                            <FormControlLabel
+                                control={
+                                <Checkbox
+                                    checked={tipos.checked1hab}
+                                    onChange={handleTipos}
+                                    name="checked1hab"
+                                    color="primary"
+                                />
+                                }
+                                label="1 habitacion"
+                            />
+                            <FormControlLabel
+                                control={
+                                <Checkbox
+                                    checked={tipos.checked2hab}
+                                    onChange={handleTipos}
+                                    name="checked2hab"
+                                    color="primary"
+                                />
+                                }
+                                label="2 habitaciones"
+                            />
+                            <FormControlLabel
+                                control={
+                                <Checkbox
+                                    checked={tipos.checkedmashab}
+                                    onChange={handleTipos}
+                                    name="checkedmashab"
+                                    color="primary"
+                                />
+                                }
+                                label="Mas de 2 habitaciones"
+                            />
+                        </FormGroup>
+                    </FormControl>
+                    <div>
+                    <Button variant="contained" color="primary">
+                        Buscar
+                    </Button>
+                </div>
                 </div>
             </Container>
         </>

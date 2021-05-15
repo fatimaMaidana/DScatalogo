@@ -3,12 +3,10 @@ import React from 'react';
 import {ThemeProvider} from '@material-ui/core/styles';
 import { AppBar, Toolbar, Typography,makeStyles, Button } from "@material-ui/core";
 import 'fontsource-roboto';
-
+import ApartmentIcon from '@material-ui/icons/Apartment';
 const useStyles= makeStyles (theme=>({
     offset: theme.mixins.toolbar,
-    title: {
-        flexGrow:1
-    },
+    
     appBar: {
         marginLeft:240,
     },
@@ -25,7 +23,8 @@ const Navbar = () => {
            
                 <AppBar className={classes.appBar}>
                     <Toolbar>
-                        <Typography variant = 'h6' className={classes.title}>
+                      <ApartmentIcon></ApartmentIcon>
+                        <Typography variant = 'h5' className={classes.title}>
                           Domus Inmoviliaria
                         </Typography>
                         <div className= "links">
