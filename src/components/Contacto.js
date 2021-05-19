@@ -6,6 +6,7 @@ const useStyles = makeStyles((theme) => ({
       '& > *': {
         margin: theme.spacing(1),
       },
+        width: 469,
     },
   }));
 
@@ -22,24 +23,34 @@ const Contacto = () => {
     return (
         <Grid
         container
-        spacing={0}
+        spacing={3}
         direction="column"
         alignItems="center"
-        justify="center"
+        justifyContent="center"
+        padding= "1rem"
+
         style={{ minHeight: '100vh' }}
         >
     
         <Grid item xs={9} xm={6}>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
             <h2>Contacta con Nosotros</h2>
             <form className={classes.root}>
-                <div>
-                    <TextField style={{margin:10}} id="nombre" label="Nombre" />
-                    <TextField id="apellido" label="Apellido" variant="filled" />
-                </div>
                 
-                <TextField id="email" label="Email" variant="outlined" />
-                <TextField id="telefono" label="Telefono" variant="outlined" />
-    
+                    <TextField id="nombre" label="Nombre" variant="outlined" />
+                    <TextField id="apellido" label="Apellido" variant="outlined" />
+                <div></div>
+               
+                    <TextField id="email" label="Email" variant="outlined" />
+                    <TextField id="telefono" label="Telefono" variant="outlined" />
+
+                <div></div>
+                     <TextField id="asunto" multiline rows={4} fullWidth label="Asunto" variant="outlined" />
+
+                
                 <div>
                     <Button variant="contained" color="primary">
                         Enviar

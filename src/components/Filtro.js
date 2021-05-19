@@ -34,6 +34,7 @@ export default function Filtro() {
                 <div className={classes.root}>
                     <FormControl>
                         <FormLabel component="legend">Tipo de Contrato</FormLabel>
+                        <br></br>
                         <FormGroup row>
                             <FormControlLabel
                                 control={
@@ -56,10 +57,13 @@ export default function Filtro() {
                                 }
                                 label="Venta"
                             />
+
                         </FormGroup>
                     </FormControl>
                     <FormControl>
+                        <br></br>
                         <FormLabel component="legend">Tipo Inmueble</FormLabel>
+                        <br></br>
                         <FormGroup row>
                             <FormControlLabel
                                 control={
@@ -85,7 +89,9 @@ export default function Filtro() {
                         </FormGroup>
                     </FormControl>
                     <FormControl>
+                    <br></br>
                     <FormLabel component="legend">Habitaciones</FormLabel>
+                    <br></br>
                         <FormGroup row>
                             <FormControlLabel
                                 control={
@@ -106,7 +112,7 @@ export default function Filtro() {
                                     color="primary"
                                 />
                                 }
-                                label="1 habitacion"
+                                label="1"
                             />
                             <FormControlLabel
                                 control={
@@ -117,7 +123,7 @@ export default function Filtro() {
                                     color="primary"
                                 />
                                 }
-                                label="2 habitaciones"
+                                label="2"
                             />
                             <FormControlLabel
                                 control={
@@ -128,9 +134,60 @@ export default function Filtro() {
                                     color="primary"
                                 />
                                 }
-                                label="Mas de 2 habitaciones"
+                                label="Mas de 2"
                             />
                         </FormGroup>
+                    </FormControl>
+                    <FormControl>
+                    <br></br>
+                    <FormLabel component="legend">Zonas</FormLabel>
+                    <br></br>
+                        <FormGroup row>
+                            <FormControlLabel
+                                control={
+                                <Checkbox 
+                                    checked={tipos.checkedZona1} 
+                                    onChange={handleTipos} 
+                                    name="checkedZona1" 
+                                    color="primary"
+                                />}
+                                label="Zona A"
+                            />
+                            <FormControlLabel
+                                control={
+                                <Checkbox
+                                    checked={tipos.checkedZona2}
+                                    onChange={handleTipos}
+                                    name="checkedZona2"
+                                    color="primary"
+                                />
+                                }
+                                label="Zona B"
+                            />
+                            <FormControlLabel
+                                control={
+                                <Checkbox
+                                    checked={tipos.checkedZona3}
+                                    onChange={handleTipos}
+                                    name="checkedZona3"
+                                    color="primary"
+                                />
+                                }
+                                label="Zona C"
+                            />
+                            <FormControlLabel
+                                control={
+                                <Checkbox
+                                    checked={tipos.checkedZona4}
+                                    onChange={handleTipos}
+                                    name="checkedZona4"
+                                    color="primary"
+                                />
+                                }
+                                label="Zona D"
+                            />
+                        </FormGroup>
+                        <br></br>
                     </FormControl>
                     <div>
                     <Button variant="contained" color="primary">

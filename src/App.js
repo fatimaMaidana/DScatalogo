@@ -5,6 +5,8 @@ import Contacto from './components/Contacto.js';
 import {Switch, Route} from 'react-router-dom';
 import { ThemeProvider} from '@material-ui/core';
 import theme from './ThemeConfig.js';
+import Footer from './components/Footer'
+
 function App() {
   return (
     <div className="App">
@@ -24,6 +26,7 @@ function App() {
           </div>
           </Route>
         </Switch>
+        
     </div>
   );
 }

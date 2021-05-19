@@ -11,10 +11,10 @@ import tileData from '../imagenes/imagen';
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
+    justifyContent: 'flex-start',
     overflow: 'hidden',
     backgroundColor: theme.palette.background.paper,
+    
   },
   gridList: {
     width: 700,
@@ -32,7 +32,7 @@ export default function TitlebarGridList() {
   
   return (
     <div className={classes.root}>
-      <GridList cellHeight={180} className={classes.gridList}>
+      <GridList cellHeight={170} className={classes.gridList}>
         <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
           <ListSubheader component="div">Propiedades</ListSubheader>
         </GridListTile>
